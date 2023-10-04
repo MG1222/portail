@@ -5,13 +5,13 @@
 - [Introduction](#introduction)
 - [Structure du Projet](#structure-du-Projet)
 - [Configuration initiale](#Configuration-initiale)
+- [Fonctionnalités principales](#fonctionnalités-principales)
 - [Tables de la base de données](#tables-de-la-base-de-données)
     - [admin](#admin)
     - [documents](#documents)
     - [projects](#projects)
     - [roles](#roles)
     - [users](#users)
-- [Fonctionnalités principales](#fonctionnalités-principales)
 
 ## Introduction
 Ce projet est une application web en PHP conçue pour gérer les profils des utilisateurs et des administrateurs.
@@ -96,6 +96,26 @@ Les utilisateurs et les administrateurs peuvent voir tous leurs projets associé
   Si vous utilisez un autre service, consultez la documentation ou le support de ce service pour obtenir les bons paramètres.
 
 
+## Fonctionnalités principales
+
+Gestion des utilisateurs :
+Le "Main Admin" peut créer et supprimer tous les utilisateurs ou administrateurs.
+Les administrateurs spécifiques (par exemple, admin-rum) peuvent gérer uniquement les utilisateurs associés à leurs projets spécifiques.
+
+1. **Gestion des projets**:
+    - Création, modification, et suppression de projets.
+    - Association de documents à des projets.
+
+2. **Gestion des documents**:
+    - Ajout, modification, et suppression de documents.
+    - Association de documents à des utilisateurs ou des administrateurs.
+
+3. **Gestion des utilisateurs et des administrateurs**:
+    - Inscription, connexion, et déconnexion.
+    - Réinitialisation du mot de passe.
+    - Attribution de rôles aux utilisateurs.
+
+
 ## Tables de la base de données
 
 ### `admin`
@@ -143,24 +163,7 @@ Les utilisateurs et les administrateurs peuvent voir tous leurs projets associé
 - **reset_token**: Token pour la réinitialisation du mot de passe.
 - **reset_token_expiry**: Date d'expiration du token de réinitialisation.
 
-## Fonctionnalités principales
 
-Gestion des utilisateurs :
-Le "Main Admin" peut créer et supprimer tous les utilisateurs ou administrateurs.
-Les administrateurs spécifiques (par exemple, admin-rum) peuvent gérer uniquement les utilisateurs associés à leurs projets spécifiques.
-
-1. **Gestion des projets**:
-    - Création, modification, et suppression de projets.
-    - Association de documents à des projets.
-
-2. **Gestion des documents**:
-    - Ajout, modification, et suppression de documents.
-    - Association de documents à des utilisateurs ou des administrateurs.
-
-3. **Gestion des utilisateurs et des administrateurs**:
-    - Inscription, connexion, et déconnexion.
-    - Réinitialisation du mot de passe.
-    - Attribution de rôles aux utilisateurs.
 
 4. **Gestion des rôles**:
     - Définition des permissions associées à chaque rôle.
